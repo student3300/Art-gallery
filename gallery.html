@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artist Gallery</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #1e1e2f, #34344e);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .gallery-section {
+      margin-top: 3rem;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 3rem;
+      color: #2c2c2c;
+    }
+
+    .subheading {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .card {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer {
+      background: #1e1e2f;
+      color: #ccc;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+    .footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    .footer .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      color: #aaa;
+      transition: color 0.3s;
+    }
+    .footer .social-icons i:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">🎨 ArtGallery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="art.html">Artists</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery Section -->
+  <div class="container gallery-section">
+    <h1 class="gallery-title">Explore Artworks from Famous Artists</h1>
+    <p class="subheading">Discover the masterpieces of modern and contemporary art.</p>
+
+    <!-- Gallery Cards -->
+    <div class="row mt-4">
+      <!-- Banksy Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/91/42/86/914286de1c4c844f9bc2f13d989b3c35.jpg" class="card-img-top" alt="Banksy Art - Girl with a Balloon">
+          <div class="card-body">
+            <h5 class="card-title">Banksy - Girl with a Balloon</h5>
+            <p class="card-text">One of Banksy's most famous pieces, symbolizing hope, love, and loss.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#balloonModal">View Artwork</a>
+
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Banksy Art -->
+<div class="modal fade" id="balloonModal" tabindex="-1" aria-labelledby="balloonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="balloonModalLabel">Banksy - Girl with a Balloon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://i.pinimg.com/736x/91/42/86/914286de1c4c844f9bc2f13d989b3c35.jpg" alt="Girl with a Balloon" class="img-fluid mb-3 rounded">
+        <p>This piece by Banksy symbolizes hope, love, and loss. It's one of the most recognizable works in street art history.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Yayoi Kusama Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://live.staticflickr.com/7144/6837271137_19455d8399_b.jpg" class="card-img-top" alt="Yayoi Kusama Art - Infinity Room">
+          <div class="card-body">
+            <h5 class="card-title">Yayoi Kusama - Infinity Room</h5>
+            <p class="card-text">A surreal experience of reflection and repetition, encapsulating Kusama's signature polka dot style.</p>
+            <a href="#" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#kusamaModal">View Artwork</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Kusama Art  -->
+      <div class="modal fade" id="kusamaModal" tabindex="-1" aria-labelledby="kusamaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="kusamaModalLabel">Yayoi Kusama - Infinity Mirror Room</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://live.staticflickr.com/7144/6837271137_19455d8399_b.jpg" alt="Infinity Mirror Room" class="img-fluid mb-3 rounded">
+              <p>Kusama’s Infinity Mirror Rooms immerse the viewer in a surreal, endless space of reflection, lights, and bold color. It's an iconic contemporary art installation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Frida Kahlo Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://3.bp.blogspot.com/-IPHVU5sZP3E/VEgLFRXwJuI/AAAAAAAAG0Q/ED7LHkbiAnw/s1600/Frida_Kahlo_(self_portrait).jpg" class="card-img-top" alt="Frida Kahlo Art - Self-Portrait with Thorn Necklace and Hummingbird">
+          <div class="card-body">
+            <h5 class="card-title">Frida Kahlo - Self-Portrait with Thorn Necklace and Hummingbird</h5>
+            <p class="card-text">An emotional and symbolic self-portrait that reflects Kahlo's personal pain and strength.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fridaModal">View Artwork</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Kahlo Art -->
+      <div class="modal fade" id="fridaModal" tabindex="-1" aria-labelledby="fridaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="fridaModalLabel">Frida Kahlo - Self Portrait with Thorn Necklace</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://3.bp.blogspot.com/-IPHVU5sZP3E/VEgLFRXwJuI/AAAAAAAAG0Q/ED7LHkbiAnw/s1600/Frida_Kahlo_(self_portrait).jpg" alt="Frida Kahlo Self Portrait" class="img-fluid mb-3 rounded">
+              <p>This powerful self-portrait captures Frida Kahlo’s pain, strength, and symbolic elements like the monkey and thorn necklace. A true reflection of her life and identity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Damien Hirst Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://d7hftxdivxxvm.cloudfront.net/?height=421&quality=80&resize_to=fit&src=https://d32dm0rphc51dk.cloudfront.net/4Dt6dIAkdZqPF90TjV431A/large.jpg&width=640" class="card-img-top" alt="Damien Hirst Art - The Physical Impossibility of Death in the Mind of Someone Living">
+          <div class="card-body">
+            <h5 class="card-title">Damien Hirst - The Physical Impossibility of Death in the Mind of Someone Living</h5>
+            <p class="card-text">Hirst's iconic artwork featuring a shark suspended in formaldehyde, challenging perceptions of life and death.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hirstModal">View Artwork</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Damien Hirst Art -->
+      <div class="modal fade" id="hirstModal" tabindex="-1" aria-labelledby="hirstModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="hirstModalLabel">Damien Hirst - The Physical Impossibility of Death</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://d7hftxdivxxvm.cloudfront.net/?height=421&quality=80&resize_to=fit&src=https://d32dm0rphc51dk.cloudfront.net/4Dt6dIAkdZqPF90TjV431A/large.jpg&width=640" alt="Damien Hirst Shark" class="img-fluid mb-3 rounded">
+              <p>This controversial artwork features a preserved shark in formaldehyde. Hirst explores themes of mortality, science, and the surreal confrontation with death.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <!-- Jean-Michel Basquiat Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://www.artforum.com/wp-content/uploads/2018/12/article00_large-111.jpg?w=600&h=400&crop=1" class="card-img-top" alt="Jean-Michel Basquiat Art - Untitled">
+          <div class="card-body">
+            <h5 class="card-title">Jean-Michel Basquiat - Untitled</h5>
+            <p class="card-text">A powerful and raw depiction of Basquiat's signature graffiti-influenced style.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basquiatModal">View Artwork</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for  Jean-Michel Basquiat Art -->
+      <div class="modal fade" id="basquiatModal" tabindex="-1" aria-labelledby="basquiatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="basquiatModalLabel">Jean-Michel Basquiat - Untitled (1981)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://www.artforum.com/wp-content/uploads/2018/12/article00_large-111.jpg?w=600&h=400&crop=1" alt="Basquiat Artwork" class="img-fluid mb-3 rounded">
+              <p>Raw and expressive, Basquiat’s work blends street art, symbolism, and commentary on race and identity. His unique visual language continues to inspire generations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Takashi Murakami Art -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://mymodernmet.com/wp/wp-content/uploads/archive/hRuEnRVnzmAmc20Po-8c_1082110405.jpeg" class="card-img-top" alt="Takashi Murakami Art - My Lonely Cowboy">
+          <div class="card-body">
+            <h5 class="card-title">Takashi Murakami - My Lonely Cowboy</h5>
+            <p class="card-text">A controversial yet colorful artwork blending Japanese pop culture and traditional fine art.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#murakamiModal">View Artwork</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modal for Takashi Murakami Art -->
+  <div class="modal fade" id="murakamiModal" tabindex="-1" aria-labelledby="murakamiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="murakamiModalLabel">Takashi Murakami - Flower Ball</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://mymodernmet.com/wp/wp-content/uploads/archive/hRuEnRVnzmAmc20Po-8c_1082110405.jpeg" alt="Murakami Flower Ball" class="img-fluid mb-3 rounded">
+          <p>Known for blending traditional Japanese techniques with pop art, Murakami’s Flower Ball radiates joy, color, and playfulness through its iconic smiling flowers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6 text-md-start">
+          <h5 class="mb-3">About ArtGallery</h5>
+          <p>Celebrating creativity through curated collections from global artists. Discover, enjoy, and own your favorite pieces.</p>
+        </div>
+      
+        <div class="col-md-3">
+          <h5 class="mb-3">Connect with us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #444;">
+      <p class="mb-0">© 2025 ArtGallery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

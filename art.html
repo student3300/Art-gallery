@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artist Page</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .navbar {
+      background: linear-gradient(to right, #1e1e2f, #34344e);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+  
+    .artist-hero-section {
+      overflow: hidden;
+      position: relative;
+      background-color: #f5f5f5;
+      height: 500px;
+    }
+    .artist-hero-section img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      filter: blur(3px);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .artist-hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .artist-hero-text h1 {
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .artist-hero-text p {
+      color: #f5f5f5;
+      font-size: 1.2rem;
+    }
+  
+    .artist-section {
+      margin-top: 3rem;
+    }
+    .artist-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 3rem;
+      color: #2c2c2c;
+    }
+    .artist-bio {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+  
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .card {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .footer {
+      background: #1e1e2f;
+      color: #ccc;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+    .footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    .footer .social-icons i {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      color: #aaa;
+      transition: color 0.3s;
+    }
+    .footer .social-icons i:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">🎨 ArtGallery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="art.html">Artists</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Artist Hero Section -->
+  <section class="artist-hero-section">
+    <img src="https://static1.squarespace.com/static/604679a7f3b0ae4a28eef527/t/605115880d020f00b55d715d/1615994457611/SSG201902_InsideTheArtistsStudio-2-2.jpg?format=1500w" alt="Featured Art" class="w-100 img-fluid">
+    <div class="artist-hero-text">
+      <h1 class="display-4 fw-bold">Meet the Artists</h1>
+      <p class="lead">Explore the incredible talent of modern-day artists shaping the art world today.</p>
+    </div>
+  </section>
+
+  <!-- Artist Information Section -->
+  <div class="container artist-section">
+    <h1 class="artist-title">Featured Artists</h1>
+    <p class="artist-bio">Get to know the creative minds behind some of the most iconic works of contemporary art.</p>
+
+    <!-- Artist 1 -->
+    <div class="row mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://www.shutterstock.com/editorial/image-editorial/M8TaAby8O8T9U037MTg2Njc=/robert-del-naja-aka-3d-massive-attack-1500w-10215789w.jpg" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Banksy</h5>
+            <p class="card-text">A mysterious and elusive street artist, known for powerful social commentary through stenciled graffiti art.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#banksyModal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Banksy Modal -->
+<div class="modal fade" id="banksyModal" tabindex="-1" aria-labelledby="banksyLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="banksyLabel">Banksy</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://www.shutterstock.com/editorial/image-editorial/M8TaAby8O8T9U037MTg2Njc=/robert-del-naja-aka-3d-massive-attack-1500w-10215789w.jpg" class="img-fluid rounded mb-3" alt="Banksy">
+        <p>Banksy is a mysterious and anonymous England-based street artist, political activist, and film director. His satirical street art and subversive epigrams combine dark humor with graffiti executed in a distinctive stenciling technique. His works often engage with social and political themes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Artist 2 -->
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ41VxUqZZfAP_WrHEaekZUA-_xXQs00v0RYZTpUlxGzRv6XTYD7WYcTIwk4F83xkT0M4o&usqp=CAU" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Yayoi Kusama</h5>
+            <p class="card-text">Known for her polka dots and infinity mirror rooms, Kusama's art blends obsession, infinity, and personal experience.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kusamaModal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      
+<!-- Yayoi Kusama Modal -->
+<div class="modal fade" id="kusamaModal" tabindex="-1" aria-labelledby="kusamaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="kusamaLabel">Yayoi Kusama</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ41VxUqZZfAP_WrHEaekZUA-_xXQs00v0RYZTpUlxGzRv6XTYD7WYcTIwk4F83xkT0M4o&usqp=CAU" class="img-fluid rounded mb-3" alt="Yayoi Kusama">
+        <p>Yayoi Kusama is a Japanese contemporary artist who works primarily in sculpture and installation but is also active in painting, performance, and fashion. Known for her obsession with polka dots and mirrors, her art reflects a unique mix of psychological trauma and infinite beauty.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Artist 3 -->
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg/500px-Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Frida Kahlo</h5>
+            <p class="card-text">A Mexican artist known for her surreal, vivid self-portraits exploring identity, pain, and human experience.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kahloModal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Frida Kahlo Modal -->
+<div class="modal fade" id="kahloModal" tabindex="-1" aria-labelledby="kahloLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="kahloLabel">Frida Kahlo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg/500px-Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg" class="img-fluid rounded mb-3" alt="Frida Kahlo">
+        <p>Frida Kahlo was a Mexican painter known for her many portraits and works inspired by the nature and artifacts of Mexico. She used a folk art style to explore themes such as identity, the human body, and death. Her deeply personal works often depict her pain and passion.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Artist 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://media.londonmuseum.org.uk/images/wagtailsource-damien-hirst-with-.width-1122.format-webp.webp" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">Damien Hirst</h5>
+            <p class="card-text">Famous for his provocative work that challenges ideas of life, death, and beauty. Known for "The Physical Impossibility of Death in the Mind of Someone Living".</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hirstModal">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Damien Hirst Modal -->
+<div class="modal fade" id="hirstModal" tabindex="-1" aria-labelledby="hirstLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="hirstLabel">Damien Hirst</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://media.londonmuseum.org.uk/images/wagtailsource-damien-hirst-with-.width-1122.format-webp.webp" class="img-fluid rounded mb-3" alt="Damien Hirst">
+        <p>Damien Hirst is a British artist, entrepreneur, and art collector. He is one of the Young British Artists (YBAs) who dominated the art scene in the UK during the 1990s. Hirst is known for artworks that explore themes of death and decay, including preserved animals and medical motifs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6 text-md-start">
+          <h5 class="mb-3">About ArtGallery</h5>
+          <p>Celebrating creativity through curated collections from global artists. Discover, enjoy, and own your favorite pieces.</p>
+        </div>
+        
+        <div class="col-md-3">
+          <h5 class="mb-3">Connect with us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #444;">
+      <p class="mb-0">© 2025 ArtGallery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
